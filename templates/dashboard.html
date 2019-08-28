@@ -20,7 +20,7 @@
 
 {% block scripts %}
 <script>
-  Iugu.setAccountID('ACCOUNT_ID');
+  Iugu.setAccountID('{{ account_id }}');
 
   document.forms.payment.onsubmit = function(e) {
 

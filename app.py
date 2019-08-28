@@ -47,8 +47,10 @@ def dashboard():
     name = session['name']
     avatar = session['avatar']
     bio = session['bio']
+    account_id = app.config.get('ACCOUNT_ID')
 
     return render_template('dashboard.html',
                            name=name,
                            avatar=avatar,
-                           bio=bio)
+                           bio=bio,
+                           account_id=account_id)
