@@ -1,0 +1,142 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-family: "Roboto", sans-serif;
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: rgb(11, 10, 13);
+}
+
+.index {
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+
+.index__title {
+  margin-bottom: 16px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.index__button {
+  background-color: rgb(113, 89, 193);
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+  align-items: center;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  color: inherit;
+  display: flex;
+  height: 160px;
+  width: 160px;
+}
+
+.index__button:hover {
+  background-color: rgb(86, 69, 139);
+}
+
+.index__button svg {
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .index__title {
+    font-size: 24px;
+  }
+
+  .index__button {
+    font-size: 20px;
+    height: 200px;
+    width: 200px;
+  }
+
+  .index__button svg {
+    font-size: 24px;
+  }
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  padding: 16px;
+}
+
+.dashboard__avatar {
+  border: 5px solid rgb(113, 89, 193);
+  border-radius: 50%;
+  height: 92px;
+  width: 92px;
+  margin-bottom: 16px;
+}
+
+.dashboard h1 {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.dashboard p {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.dashboard input {
+  background-color: rgb(25, 24, 31);
+  border: 3px solid rgb(37, 36, 44);
+  border-radius: 4px;
+  color: inherit;
+  margin: 8px 0;
+  padding: 5px 16px;
+  height: 50px;
+  width: 100%;
+}
+
+.dashboard input:focus {
+  border: 3px solid rgb(113, 89, 193);
+}
+
+.dashboard button {
+  background-color: rgb(113, 89, 193);
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 8px 0;
+  border: none;
+  height: 50px;
+  width: 100%;
+}
+
+.dashboard button:hover {
+  background-color: rgb(86, 69, 139);
+}
+
+@media (min-width: 768px) {
+  .dashboard {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .dashboard__avatar {
+    height: 134px;
+    width: 134px;
+  }
+}

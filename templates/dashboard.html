@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main class="dashboard">
+  <img class="dashboard__avatar" src="{{ avatar }}" alt="avatar">
+  <h1>{{ name }}</h1>
+  <p>{{ bio }}</p>
+
+  <form name="payment">
+    <input type="text" name="number" value="5340836214025483">
+    <input type="text" name="month" value="3">
+    <input type="text" name="year" value="2020">
+    <input type="text" name="first_name" value="{{ name }}">
+    <input type="text" name="last_name">
+    <input type="text" name="cvv" value="620">
+    <button type="submit">Buy</button>
+  </form>
+</main>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  Iugu.setAccountID('ACCOUNT_ID');
+
+  document.forms.payment.onsubmit = function(e) {
+
+    e.preventDefault();
+
+    const card = Iugu.CreditCard(this.number.value, this.month.value, this.year.value, this.first_name.value, this.last_name.value, this.cvv.value);
+
+    Iugu.createPaymentToken(card, function(response) {
+      alert(JSON.stringify(response))
+    })
+  }
+</script>
+{% endblock %}
